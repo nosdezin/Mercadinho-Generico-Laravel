@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@layer components {
+    /* HEADER */
+    .header {
+        @apply flex justify-evenly items-center bg-gray-600 h-20;
+    }
+    .logo {
+        @apply font-bold text-4xl;
+    }
+    .search {
+        @apply flex bg-amber-200;
+    }
+    .search img {
+        @apply w-7;
+    }
+
+    /* MAIN */
+    .main{
+        @apply min-h-96 mb-10 mt-10;
+    }
+
+    /* MAIN HOME */
+    .line-product {
+        @apply flex justify-evenly;
+    }
+    .product {
+        @apply flex flex-col items-center bg-gray-400;
+    }
+    .product img {
+        @apply w-48;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+        @apply bg-blue-400 text-white p-2 rounded-md;
+    }
+    .btn-confirm {
+        @apply bg-green-400 text-white p-2 rounded-md hover:bg-green-500 transition-colors;
+    }
+    .btn-danger {
+        @apply bg-yellow-400 text-white p-2 rounded-md;
+    }
+    .btn-delete{
+      @apply bg-red-400 text-white p-2 rounded-md;
+    }
+
+    /* ADMIN */
+    .main-admin-container{
+      @apply flex flex-col justify-center items-center;
+    }
+    .list-product{
+      @apply bg-gray-300 w-3/4 h-3/4;
+    }
+    .list-product li{
+      @apply flex justify-evenly;
+    }
+
+    /* CREATE */
+
+    .create-form{
+        @apply flex flex-col justify-center w-1/8 bg-gray-300 gap-1 p-2 rounded-2xl;
+    }
+    .create-form input{
+        @apply bg-white border-2;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        @apply flex w-full justify-evenly border-t-black border-t-2 mt-8 p-4;
+    }
+    .footer-column {
+        @apply flex flex-col w-1/4;
+    }
+    .footer-column h1 {
+        @apply underline font-bold pb-2.5 text-lg;
+    }
+    .footer-column a {
+        @apply text-sm hover:text-base transition-all;
+    }
+    .social-midia {
+        @apply flex gap-4;
+    }
+    .social-midia img {
+        @apply w-8;
+    }
+}
