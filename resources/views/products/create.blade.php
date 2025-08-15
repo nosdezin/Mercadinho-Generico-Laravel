@@ -2,7 +2,7 @@
 
 @section("content-main")
     <h1>Cadastro de produto</h1>
-    <form action="{{ route('product.store') }}" method="POST" class="create-form">
+    <form action="{{ route('product.store') }}" method="post" class="create-form">
         <div>
             <label for="name">Nome:</label>
             <input type="text" name="name">
